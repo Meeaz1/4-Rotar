@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int x, y;
+    double result;
+    double choice;
+
+    do {
+        printf("Введіть ціле значення x: ");
+        scanf("%d", &x);
+        printf("Введіть ціле значення y: ");
+        scanf("%d", &y);
+
+        result = pow(x, 2) + log(2) * x * y - pow(y, 2) / (1 + pow(x, 2) + pow(y, 2));
+        printf("Значення функції для x=%d та y=%d: %.2lf\n", x, y, result);
+
+    } while (choice == 'y');
+
+    printf("Кінець програми.\n");
+
+    return 0;
+}
