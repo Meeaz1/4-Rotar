@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <math.h>
+int main() {
+    int choice;
+    int sum = 0;
+    int count = 0;
+
+    do {
+        printf("\nМеню:");
+        printf("\n1. Обчислити середнє арифметичне всіх чисел, кратних 5, у діапазоні (1;100).\n");
+        printf("2. Вийти з програми.\n");
+        printf("Оберіть опцію: ");
+        scanf("%d", &choice);
+
+        switch(choice) {
+            case 1:
+                sum = 0;
+                count = 0;
+                for (int i = 1; i <= 100; i++) {
+                    if (i % 5 == 0) {
+                        sum += i;
+                        count++;
+                    }
+                }
+                if (count > 0) {
+                    int avarage = sum / count;
+                    printf("\nСереднє арифметичне всіх чисел, кратних 5, в діапазоні (1;100): %d\n", avarage);
+                } else {
+                    printf("У діапазоні (1;100) немає чисел, кратних 5.\n");
+                }
+                break;
+            case 2:
+                printf("Програма завершена.\n");
+                break;
+            default:
+                printf("Невірний вибір. Виберіть знову.\n");
+        }
+    } while(choice != 2);
+
+    int y = 0;
+    while(y != 0) {
+        printf("Введіть будь-яке число, щоб продовжити, або 0, щоб вийти: ");
+        scanf("%d", &y);
+    }
+    int x = 0;
+    do {
+        printf("Введіть будь-яке число, щоб продовжити, або 0, щоб вийти: ");
+        scanf("%d", &x);
+    } while(x != 0);
+    printf("Програма завершена.\n");
+    return 0;
+}
