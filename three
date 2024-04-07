@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int n;
+    double x;
+    double result = 0;
+
+    printf("Введіть натуральне число n: ");
+    scanf("%d", &n);
+    printf("Введіть дійсне число x: ");
+    scanf("%lf", &x);
+
+    int i = 1;
+    while (i <= n) {
+        int j = 1;
+        while (j <= n) {
+            result += pow(x, i * j);
+            j++;
+        }
+        i++;
+    }
+
+    printf("Результат суми: %.2lf\n", result);
+
+    return 0;
+}
