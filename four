@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <math.h>
+int main() {
+    double a = -3.14159 / 2; 
+    double b = 3.14159 / 2;  
+    double dx = 3.14159 / 20; 
+    double x, y;
+
+    printf("Вирахуємо значення функції y = ctg(x) на проміжку [%.2lf, %.2lf] з кроком %.2lf\n", a, b, dx);
+    
+    x = a;
+    while (x <= b) {
+
+        y = 1 / tan(x);
+        
+        printf("x = %.2lf, y = %.2lf\n", x, y);
+        x = x + dx;
+    }
+
+    return 0;
+}
